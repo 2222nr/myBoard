@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="content" layout:fragment="content">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Content</th>
+        </tr>
+        <tr th:each="article : ${ArticleDto}" th:object="${article}" style="text-align=center;" >
+            <td th:text="*{id}"></td>
+            <td> <a th:href="@{/articles/detail/{id}(id=*{id})}" class="link-dark"> [[*{title}]]</a></td>
+            <td th:text="*{content}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <form th:action="@{/articles/search}" method="get" style="text-align: center;">
+        <select name="type">
+            <option selected value="">검색 내용 선택</option>
+            <option value="title">제목</option>
+            <option value="content">내용</option>
+        </select>
+        <input type="text" name="keyword" value="" placeholder="검색어를 입력하세요">
+        <input type="submit" value="검색">
+    </form>
+</div>
+</body>
+</html>
