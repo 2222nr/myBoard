@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" th:src="@{/js/check.js}"></script>
 </head>
 <body>
 <div class="content" layout:fragment="content">
-    <form class="container" th:action="@{/articles/insert}" method="post" th:object="${articleDto}">
+    <form id="frm" class="container" th:action="@{/articles/insert}" method="post" th:object="${articleDto}">
         <div class="mb3">
             <label for="title" class="form-label">제목</label>
-            <input type="text" class="form-control" id="title" th:field="*{title}">
-            <span class="text-danger" th:errors="*{title}"></span>
+            <input type="text" class="form-control" id="title" name="title" th:field="*{title}">
+<!--            <span class="text-danger" th:errors="*{title}"></span>-->
         </div>
         <div class="mb3">
             <label class="form-label">내용</label>
-            <textarea class="form-control" row="3"  id="content" th:field="*{content}"></textarea>
-            <span class="text-danger" th:errors="*{content}"></span>
+            <textarea class="form-control" row="3"  id="content" name="content" th:field="*{content}"></textarea>
+<!--            <span class="text-danger" th:errors="*{content}"></span>-->
         </div>
         <br>
-        <input type="submit" value="저장" class="btn btn-primary">
+        <input type="button" value="저장" class="btn btn-primary" onclick="check()">
+        <input type="button" value="리셋" class="btn btn-light" onclick="res()">
+
         <a href="/">Back</a>
     </form>
 </div>

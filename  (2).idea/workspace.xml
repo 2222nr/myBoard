@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6a749cd-036b-4451-913e-0783c059c9f9" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="myboard" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application-test.properties" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fR9Siex24IkCMCNcjxKXMGFk4Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyboardApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.ArticleRepositoryTest.executor": "Run",
+    "JUnit.ArticleRepositoryTest.findAllTest.executor": "Run",
+    "JUnit.ArticleRepositoryTest.모든데이터검색.executor": "Run",
+    "JUnit.ArticleRepositoryTest.모든데이터검색_성공.executor": "Run",
+    "JUnit.ArticleRepositoryTest.자료삭제_테스트_성공.executor": "Run",
+    "JUnit.ArticleRepositoryTest.자료수정_테스트.executor": "Run",
+    "JUnit.ArticleRepositoryTest.자료입력테스트.executor": "Run",
+    "JUnit.ArticleRepositoryTest.전체데이터검색_개수.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/springProject/myBoard",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "yaml"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.myboard.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ArticleRepositoryTest">
+    <configuration name="ArticleRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myboard.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myBoard.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.myboard.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.myBoard.repository.ArticleRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleRepositoryTest.자료입력테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myboard.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myBoard.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.myboard.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.myBoard.repository.ArticleRepositoryTest" />
+      <option name="METHOD_NAME" value="자료입력테스트" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleRepositoryTest.자료수정_테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myboard.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myBoard.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.myboard.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.myBoard.repository.ArticleRepositoryTest" />
+      <option name="METHOD_NAME" value="자료수정_테스트" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleRepositoryTest.모든데이터검색_성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myboard.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myboard.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.myboard.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.myboard.repository.ArticleRepositoryTest" />
+      <option name="METHOD_NAME" value="모든데이터검색_성공" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleRepositoryTest.자료삭제_테스트_성공" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myboard.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myBoard.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.myboard.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.myBoard.repository.ArticleRepositoryTest" />
+      <option name="METHOD_NAME" value="자료삭제_테스트_성공" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArticleRepositoryTest" />
+        <item itemvalue="JUnit.ArticleRepositoryTest.자료수정_테스트" />
+        <item itemvalue="JUnit.ArticleRepositoryTest.자료삭제_테스트_성공" />
+        <item itemvalue="JUnit.ArticleRepositoryTest.자료입력테스트" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6a749cd-036b-4451-913e-0783c059c9f9" name="Changes" comment="" />
+      <created>1713753025456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713753025456</updated>
+    </task>
+    <servers />
+  </component>
+</project>

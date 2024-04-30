@@ -3,12 +3,14 @@ package com.example.myBoard.dto;
 import com.example.myBoard.entity.Article;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ArticleDto {
     private Long id;
 

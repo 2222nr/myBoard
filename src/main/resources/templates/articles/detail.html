@@ -8,20 +8,18 @@
 <body>
 
 <div class="content" layout:fragment="content" >
-    <form class="container" th:object="${articleDto}">
+    <form class="container text-wrap" th:object="${articleDto}" >
         <br>
-        <table class="table">
-            <tr>
-                <th>제목</th>
-                <td th:text="*{title}"></td>
-            </tr>
-            <tr>
-                <th>내용</th>
-                <td th:text="*{content}"></td>
-            </tr>
-
-        </table>
-
+        <label for="title"><b>제목</b></label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="title" placeholder="*{title}" disabled>
+            <label for="title" th:text="*{title}"></label>
+        </div>
+        <label for="content"><b>내용</b></label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="content" placeholder="*{content}" disabled>
+            <label for="content" th:text="*{content}"></label>
+        </div>
     </form>
     <br>
     <div class="container" th:object="${articleDto}">

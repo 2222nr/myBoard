@@ -1,12 +1,14 @@
 package com.example.myBoard.controller;
 
 import com.example.myBoard.dto.ArticleDto;
+import com.example.myBoard.entity.Article;
 import com.example.myBoard.service.ArticleService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -70,8 +72,15 @@ public class ArticleController {
     }
 
     @PostMapping("{deleteId}")
-    public String delete(@PathVariable("deleteId") Long id){
-        articleService.delete(id);
+    public String delete(@PathVariable("deleteId") Long id,
+                         RedirectAttributes redirectAttributes){
+        // 1. 삭제할 대상이 존재하는지 체크
+        ArticleDto articleDto = articleService.detailView(id);
+        // 2. 대상 entity가 존재하면 삭제처리 후 메세지 전송
+        if(articleDto != null){
+            articleService.delete(id);
+            redirectAttributes.addFlashAttribute("msg", "정상적으로 삭제되었습니다.");
+        }
         return "redirect:/";
     }
 

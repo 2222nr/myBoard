@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     @Query(value = "select * from article order by age", nativeQuery = true)
