@@ -3,6 +3,8 @@ package com.example.myBoard.service;
 import com.example.myBoard.dto.ArticleDto;
 import com.example.myBoard.entity.Article;
 import com.example.myBoard.repository.ArticleRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -31,7 +33,6 @@ public class ArticleService {
         Article article = articleDto.fromArticleDto(articleDto);
         articleRepository.save(article);
     }
-
 
     public void updateContent(ArticleDto articleDto) {
         Article article = articleDto.fromArticleDto(articleDto);
@@ -78,4 +79,10 @@ public class ArticleService {
                 .content(articleDto.getContent())
                 .build();
     }
+
+    public Page<Article> pagingList(Pageable pageable) {
+        return articleRepository.findAll(pageable);
+    }
+
+
 }

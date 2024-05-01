@@ -13,7 +13,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest // 통합테스트
-@Transactional // 각 테스트 진행시의 DB 값 롤백/ 단위테스트 시에는 각 메서드에 적용
+//@Transactional // 각 테스트 진행시의 DB 값 롤백/ 단위테스트 시에는 각 메서드에 적용
 @TestPropertySource(locations = "classpath:application-test.properties")
 class ArticleRepositoryTest {
     @Autowired  // 자동주입

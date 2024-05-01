@@ -4,6 +4,10 @@ import com.example.myBoard.dto.ArticleDto;
 import com.example.myBoard.entity.Article;
 import com.example.myBoard.service.ArticleService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -20,6 +24,8 @@ public class ArticleController {
     public ArticleController(ArticleService articleService) {
         this.articleService = articleService;
     }
+
+
 
     @GetMapping("insert")
     public String insertView(Model model){

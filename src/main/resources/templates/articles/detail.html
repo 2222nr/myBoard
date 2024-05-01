@@ -8,15 +8,15 @@
 <body>
 
 <div class="content" layout:fragment="content" >
-    <form class="container text-wrap" th:object="${articleDto}" >
+    <form class="container text-break" th:object="${articleDto}" >
         <br>
         <label for="title"><b>제목</b></label>
-        <div class="form-floating mb-3">
+        <div class="form-floating mb-3 text-break">
             <input type="text" class="form-control" id="title" placeholder="*{title}" disabled>
             <label for="title" th:text="*{title}"></label>
         </div>
         <label for="content"><b>내용</b></label>
-        <div class="form-floating mb-3">
+        <div class="form-floating mb-3 text-wrap">
             <input type="text" class="form-control" id="content" placeholder="*{content}" disabled>
             <label for="content" th:text="*{content}"></label>
         </div>

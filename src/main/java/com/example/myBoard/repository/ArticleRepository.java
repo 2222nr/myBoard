@@ -17,4 +17,5 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     @Query(value = "select * from article where content like %:keyword% order by id",
             nativeQuery = true)
     List<Article> searchContent(@Param("keyword")String keyword);
+
 }

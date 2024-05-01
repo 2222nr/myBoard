@@ -22,19 +22,19 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
+    private Long id;    //findById
+    private String name;    //findByName
     private String email;
     @Enumerated(EnumType.STRING)    // 기본: 숫자타입
     private Gender gender;
     @Column(name="like_color")
-    private String likeColor;
+    private String likeColor;   //findByLikeColor
     @Column(name="created_at", updatable = false)
     //CreateBy => 누가 작성했는지아아아아
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt;    //findByCreatedAt
     @Column(name="updated_at", insertable = false)
     @LastModifiedDate
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;    //findByUpdatedAt
 
 }
