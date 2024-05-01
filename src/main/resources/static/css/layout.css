@@ -26,3 +26,14 @@ body {
     margin-left : 200px;
     margin-right : 200px;
 }
+.pagination .page-item .page-link {
+    color: #198754;
+    border-color: #198754; /* 활성화된 페이지 번호의 테두리 색상 */
+}
+
+
+.pagination .page-item.active .page-link {
+    background-color: #198754; /* 활성화된 페이지 번호의 배경색 */
+    border-color: #198754; /* 활성화된 페이지 번호의 테두리 색상 */
+    color: white; /* 활성화된 페이지 번호의 텍스트 색상 */
+}
