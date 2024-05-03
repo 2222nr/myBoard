@@ -1,5 +1,7 @@
 package com.example.myBoard.config;
 
+import com.example.myBoard.service.PrincipalOauth2UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +12,9 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
+    @Autowired
+    private PrincipalOauth2UserService principalOauth2UserService;
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder(){
         return new BCryptPasswordEncoder();
@@ -22,8 +27,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests((request) -> request
                         .requestMatchers("/css/**", "/js/**", "/images/**").permitAll() // permitAll / hasRole
                         .requestMatchers("/user/**").permitAll()
-//                        .requestMatchers("/**").permitAll())
-                        .anyRequest().authenticated())
+                        .requestMatchers("/**").permitAll())
+//                        .anyRequest().authenticated())
 
                 .formLogin((form) -> form
                         .loginPage("/user/login")
@@ -34,8 +39,12 @@ public class SecurityConfig {
 
                 .logout((out) -> out
                         .logoutSuccessUrl("/")
-                        .logoutUrl("/logout")   // 얘는 Security가 관리하는애! GetMapping 필요읍뜸
-                )
+                        .logoutUrl("/logout")) // 얘는 Security가 관리하는애! GetMapping 필요읍뜸
+
+                .oauth2Login(oAuth-> oAuth
+                        .loginPage("/user/login")
+                        .defaultSuccessUrl("/")
+                        .userInfoEndpoint(userInfo -> userInfo.userService(principalOauth2UserService)))
                 .csrf(csrf -> csrf.disable());
 
         return http.build();

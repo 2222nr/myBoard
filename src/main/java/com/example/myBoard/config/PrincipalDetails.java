@@ -3,20 +3,36 @@ package com.example.myBoard.config;
 import com.example.myBoard.entity.UserAccount;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Optional;
 
-public class PrincipalDetails implements UserDetails {
+public class PrincipalDetails implements UserDetails, OAuth2User {
     private UserAccount user;
+
+    public PrincipalDetails(UserAccount user, Map<String, Object> attributes) {
+        this.user = user;
+        this.attributes = attributes;
+    }
 
     public PrincipalDetails(UserAccount user) {
         this.user = user;
     }
 
+    private Map<String, Object> attributes;
+
+
+
     public UserAccount getUser() {
         return user;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return getAttributes();
     }
 
     @Override
@@ -30,7 +46,7 @@ public class PrincipalDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return user.getUserPassword();
+        return user.getPassword();
     }
 
     @Override
@@ -56,5 +72,11 @@ public class PrincipalDetails implements UserDetails {
     @Override
     public boolean isEnabled() { // 계정 사용 여부 ( 계정 활성화)
         return true;
+    }
+
+    @Override
+    public String getName() {
+        String sub = attributes.get("sub").toString();
+        return sub;
     }
 }

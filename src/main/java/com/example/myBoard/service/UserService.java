@@ -22,7 +22,7 @@ public class UserService {
     public void createUser(UserCreateForm userCreateForm) {
         UserAccount account = new UserAccount();
         account.setUsername(userCreateForm.getUsername());
-        account.setUserPassword(passwordEncoder.encode(userCreateForm.getUserPassword2()));
+        account.setPassword(passwordEncoder.encode(userCreateForm.getPassword1()));
         account.setEmail(userCreateForm.getEmail());
         account.setNickname(userCreateForm.getNickname());
         if("ADMIN".equals(userCreateForm.getUsername().toUpperCase())){

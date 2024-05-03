@@ -32,7 +32,7 @@ public class UserAccountController {
         if(bindingResult.hasErrors()){
             return "signup";
         }
-        if(!userCreateForm.getUserPassword1().equals(userCreateForm.getUserPassword2())){
+        if(!userCreateForm.getPassword1().equals(userCreateForm.getPassword2())){
             bindingResult.rejectValue("userPassword2", "passwordIncorrect",
                     "2개의 패스워드가 일치하지 않습니다."); //
             return "signup";
