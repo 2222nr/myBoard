@@ -21,17 +21,23 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((request) -> request
                         .requestMatchers("/css/**", "/js/**", "/images/**").permitAll() // permitAll / hasRole
-                        .requestMatchers("/users/**").permitAll()
-                        .requestMatchers("/**").permitAll()
+                        .requestMatchers("/user/**").permitAll()
+//                        .requestMatchers("/**").permitAll())
                         .anyRequest().authenticated())
+
                 .formLogin((form) -> form
                         .loginPage("/user/login")
                         .loginProcessingUrl("/login") // 얘는 Security가 관리하는애! GetMapping 필요읍뜸
-                        .defaultSuccessUrl("/"))
+//                        .usernameParameter("userId")
+//                        .usernameParameter("email") // 나는 이메일로 로그인할거야! / repository 쿼리메서드 이용
+                        .defaultSuccessUrl("/paging", true))
+
                 .logout((out) -> out
                         .logoutSuccessUrl("/")
                         .logoutUrl("/logout")   // 얘는 Security가 관리하는애! GetMapping 필요읍뜸
-                );
+                )
+                .csrf(csrf -> csrf.disable());
+
         return http.build();
     }
 }

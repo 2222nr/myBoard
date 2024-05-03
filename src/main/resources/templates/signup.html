@@ -11,21 +11,24 @@
     <br>
     <h4 style="text-align: center;"><b>회원가입</b></h4>
     <form id="frm" class="container" th:action="@{/user/signup}" method="post" th:object="${userCreateForm}">
-        <div class="mb3">
-            <label for="username" class="form-label">사용자ID</label>
-            <input type="text" class="form-control" id="username" name="username" th:field="*{userId}">
+        <!--   에러처리하기 Fragment 삽입   -->
+        <div th:replace="~{fragments/form_errors :: formErrorsFragment}">
+
         </div>
         <div class="mb3">
-            <label for="password1" class="form-label">비밀번호</label>
-            <input type="password" class="form-control" id="password1" name="password1" th:field="*{userPassword1}">
-            <span class="text-danger" th:errors="*{userPassword1}"></span>
+            <label for="username" class="form-label">ID</label>
+            <input type="text" class="form-control" id="username" name="username" th:field="*{username}">
         </div>
         <div class="mb3">
-            <label for="password2" class="form-label">비밀번호확인</label>
-            <input type="password" class="form-control" id="password2" name="password2" th:field="*{userPassword2}">
+            <label for="userPassword1" class="form-label">PASSWORD</label>
+            <input type="password" class="form-control" id="userPassword1" name="userPassword1" th:field="*{userPassword1}">
         </div>
         <div class="mb3">
-            <label for="email" class="form-label">이메일</label>
+            <label for="userPassword2" class="form-label">PASSWORD CONFIRM</label>
+            <input type="password" class="form-control" id="userPassword2" name="userPassword2" th:field="*{userPassword2}">
+        </div>
+        <div class="mb3">
+            <label for="email" class="form-label">E-MAIL</label>
             <input type="email" class="form-control" id="email" name="email" th:field="*{email}">
         </div>
         <div class="mb3">
@@ -33,7 +36,7 @@
             <input type="text" class="form-control" id="nickname" name="nickname" th:field="*{nickname}">
         </div>
         <br>
-        <input type="submit" value="회원가입" class="btn btn-primary" onclick="check()">
+        <input type="submit" value="회원가입" class="btn btn-success" onclick="check()">
         <input type="button" value="다시" class="btn btn-light" onclick="res()">
     </form>
 </div>

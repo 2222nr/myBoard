@@ -3,6 +3,7 @@ package com.example.myBoard.controller;
 import com.example.myBoard.dto.UserCreateForm;
 import com.example.myBoard.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -31,7 +32,24 @@ public class UserAccountController {
         if(bindingResult.hasErrors()){
             return "signup";
         }
-        userService.createUser(userCreateForm);
+        if(!userCreateForm.getUserPassword1().equals(userCreateForm.getUserPassword2())){
+            bindingResult.rejectValue("userPassword2", "passwordIncorrect",
+                    "2개의 패스워드가 일치하지 않습니다."); //
+            return "signup";
+        }
+
+        try{
+            userService.createUser(userCreateForm);
+        } catch (DataIntegrityViolationException e){
+            e.printStackTrace();
+            bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
+            return "signup";
+        }
+        catch (Exception e) {
+            bindingResult.reject("signupFailed", e.getMessage());
+            return "signup";
+        }
+
         return "redirect:/";
     }
     @GetMapping("login")

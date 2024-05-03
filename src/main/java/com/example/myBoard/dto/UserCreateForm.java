@@ -9,7 +9,7 @@ import lombok.Data;
 public class UserCreateForm {
     @Size(min=3, max=15)
     @NotEmpty(message = "사용자 ID는 필수 입니다.")
-    private String userId;
+    private String username;
     @NotEmpty(message = "비밀번호는 필수 입니다.")
     private String userPassword1;
     @NotEmpty(message = "비밀번호 확인은 필수 입니다.")
@@ -17,4 +17,5 @@ public class UserCreateForm {
     @NotEmpty(message = "이메일은 필수 입니다.")
     private String email;
     private String nickname;
+
 }

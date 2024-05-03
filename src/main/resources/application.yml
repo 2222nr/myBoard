@@ -6,14 +6,14 @@ spring:
     username: root
     password: 1111
 
-  sql:
-    init:
-      mode: always
+#  sql:
+#    init:
+#      mode: always
 
   jpa:
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         show_sql: true

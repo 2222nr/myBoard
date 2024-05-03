@@ -8,8 +8,8 @@ import lombok.Data;
 @Data
 public class UserAccount {
     @Id
-    @Column(name="user_name", length = 50)
-    private String userId;
+    @Column(length = 50)
+    private String username;
     @Column(nullable = false)
     private String userPassword;
     @Column(length = 100)

@@ -27,6 +27,7 @@ public class ArticleController {
 
 
 
+
     @GetMapping("insert")
     public String insertView(Model model){
         model.addAttribute("articleDto", new ArticleDto());

@@ -21,16 +21,17 @@ public class MainController {
     @Autowired
     PaginationService paginationService;
     private final ArticleService articleService;
+
     public MainController(ArticleService articleService) {
         this.articleService = articleService;
     }
+
     @GetMapping("/")
-    public String allView(Model model){
+    public String allView(Model model) {
         List<ArticleDto> articleDto = articleService.ArticleAllList();
-        model.addAttribute("ArticleDto",articleDto);
+        model.addAttribute("ArticleDto", articleDto);
         return "articles/show_all";
     }
-
     @GetMapping("paging")
     public String allView(Model model,
                           @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable){
@@ -46,3 +47,4 @@ public class MainController {
         return "articles/show_all_list";
     }
 }
+
